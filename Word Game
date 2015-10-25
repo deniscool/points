@@ -1,0 +1,91 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int i,j;
+	int count = 0;
+	
+	char matrix [8][8] = {"ddeniss",
+						  "aeeesds",
+						  "nnniids",
+						  "eisiids",
+						  "sssdssp",};
+		
+		
+		
+		for(i = 0;i<7;i++){
+			for(j=0;j<7;j++){
+				if(matrix[i][j]=='d'){
+					if(matrix[i][j+1]=='e'){
+							if(matrix[i][j+2]=='n'){
+									if(matrix[i][j+3]=='i'){
+											if(matrix[i][j+4]=='s'){
+												count++;
+											}
+										
+										
+									}
+								
+							}
+						
+					}
+					
+				}
+				
+			}
+		}
+		
+		
+		for(j = 0;j<7;j++){
+			for(i=0;i<7;i++){
+				if(matrix[i][j]=='d'){
+					if(matrix[i+1][j]=='e'){
+							if(matrix[i+2][j]=='n'){
+									if(matrix[i+3][j]=='i'){
+											if(matrix[i+4][j]=='s'){
+												count++;
+											}
+										
+										
+									}
+								
+							}
+						
+					}
+					
+				}
+				
+			}
+		}
+		
+		
+			
+		for(i = 0;i<7;i++){
+			for(j=0;j<7;j++){
+				if(matrix[i][j]=='d'){
+					if(matrix[i+1][j+1]=='e'){
+							if(matrix[i+2][j+2]=='n'){
+									if(matrix[i+3][j+3]=='i'){
+											if(matrix[i+4][j+4]=='s'){
+												count++;
+											}
+										
+										
+									}
+								
+							}
+						
+					}
+					
+				}
+				
+			}
+		}
+		
+printf("%d\n",count);
+
+system("pause");
+return 0;
+		
+}
