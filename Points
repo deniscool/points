@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+	int x=0;
+	int y=0;
+	char dir[15] =">>><<<~>>>~^^^";
+	int i;
+	int c =1;
+	
+	for(i=0;i<14;i++){
+		if(dir[i]=='>') x=x+c;
+		else if(dir[i]=='<') x=x-c;
+		else if(dir[i]=='v') y=y+c;
+		else if(dir[i]== '^') y=y-c;
+		else if(dir[i]=='~') c=-c;
+	}
+	
+	printf("%d,%d\n",x,y);
+	
+	system("pause");
+	return 0;
+}
